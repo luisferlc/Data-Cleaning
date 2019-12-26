@@ -68,6 +68,7 @@ def clean_year_type(df):
                 #################################################################################
     
     df.Year[df.Year == 0] = np.NaN
+    df.Year=pd.to_numeric(df.Year)
     
     #Los cambio momentaneamente para poder correr el str.startswith
     df.Type.iloc[85] = ''
